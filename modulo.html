@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Starter Template · Bootstrap</title>
+
+    <!--Template based on URL below-->
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Place your stylesheet here-->
+    <link href="css/estilos.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg  navstyle fixed-top navbar-dark">
+        <img class="logomarhnos" src="img/SiVAwhite.png" />
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">usuario@gmail.com</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Administrar
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Tags</a>
+                        <a class="dropdown-item" href="#">Cuentas</a>
+
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cerrar Sesión</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container-fluid py-5" style="margin-top: 3.5rem;">
+        <div class="row">
+            <div class="col-xl-2">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="card shadow" style="margin-bottom: 30px;">
+                            <div class="card-header">
+                                Tags Asociados
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item hoverlisttag">6546846854</li>
+                                <li class="list-group-item hoverlisttag">1365435484</li>
+                                <li class="list-group-item hoverlisttag">6841354789</li>
+                                <li class="list-group-item hoverlisttag">5643545127</li>
+                            </ul>
+                        </div>
+                    </div>
+                     <div class="col-xl-12">
+                        <div class="card shadow" style="margin-bottom: 30px;">
+                            <div class="card-header">
+                                Cuentas Asociadas
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item hoverlisttag">6546846854</li>
+                                <li class="list-group-item hoverlisttag">1365435484</li>
+                                <li class="list-group-item hoverlisttag">6841354789</li>
+                                <li class="list-group-item hoverlisttag">5643545127</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-10">
+                <div class="card shadow">
+                    <div class="card-header header-color">
+                        <div class="">
+                            <h4>PUNTO DE VENTA</h4>
+                        </div>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a class="info">Nombre: Nombre del Usuario</a>
+                        <a class="info">No. Tag: 6546846854</a>
+                        <a class="info">Último movimiento: 11/04/2019</a>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-secondary botonresponsive">MOVIMIENTOS</button>
+                        <button type="button" class="btn btn-secondary botonresponsive">ACLARACIONES</button>
+                        <button type="button" class="btn btn-secondary botonresponsive">RECARGAR</button>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <input class="form-control" id="myInput" type="text" placeholder="Buscar...">
+                            </div>
+                            <div class="col-md-4"></div>
+                        </div>
+                        <br>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Movimiento</th>
+                                        <th>Caseta/Tramo</th>
+                                        <th>Fecha</th>
+                                        <th>Monto</th>
+                                        <th>Saldo</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="myTable">
+                                    <tr>
+                                        <td>Peaje</td>
+                                        <td>Tlalpan</td>
+                                        <td>11/04/2019</td>
+                                        <td>-$140.00</td>
+                                        <td>$220.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Peaje</td>
+                                        <td>Libramiento</td>
+                                        <td>21/03/2019</td>
+                                        <td>-$50.00</td>
+                                        <td>$300.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Recarga</td>
+                                        <td>-</td>
+                                        <td>19/01/2019</td>
+                                        <td>$70.00</td>
+                                        <td>$80.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Recarga</td>
+                                        <td>-</td>
+                                        <td>10/01/2019</td>
+                                        <td>$100.00</td>
+                                        <td>$200.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
