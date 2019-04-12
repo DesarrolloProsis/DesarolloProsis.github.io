@@ -30,16 +30,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">usuario@gmail.com</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Administrar
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Tags</a>
-                        <a class="dropdown-item" href="#">Cuentas</a>
 
-                    </div>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Cerrar Sesión</a>
                 </li>
@@ -58,23 +49,21 @@
                                 Tags Asociados
                             </div>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item hoverlisttag">6546846854</li>
-                                <li class="list-group-item hoverlisttag">1365435484</li>
-                                <li class="list-group-item hoverlisttag">6841354789</li>
-                                <li class="list-group-item hoverlisttag">5643545127</li>
+                                <li id="primertag" onclick="primertag()" class="list-group-item hoverlisttag">5019999961</li>
+                                <li id="segundotag" onclick="segundotag()" class="list-group-item hoverlisttag">5019999962</li>
+                                <li id="tercertag" onclick="tercertag()" class="list-group-item hoverlisttag">5019999963</li>
+                                <li id="cuartotag" onclick="cuartotag()" class="list-group-item hoverlisttag">5019999964</li>
                             </ul>
                         </div>
                     </div>
-                     <div class="col-xl-12">
+                    <div class="col-xl-12">
                         <div class="card shadow" style="margin-bottom: 30px;">
                             <div class="card-header">
                                 Cuentas Asociadas
                             </div>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item hoverlisttag">6546846854</li>
-                                <li class="list-group-item hoverlisttag">1365435484</li>
-                                <li class="list-group-item hoverlisttag">6841354789</li>
-                                <li class="list-group-item hoverlisttag">5643545127</li>
+                                <li id="primeracuenta" onclick="primeracuenta()" class="list-group-item hoverlisttag">6546846854</li>
+                                <li id="segundacuenta" onclick="segundacuenta()" class="list-group-item hoverlisttag">1365435484</li>
                             </ul>
                         </div>
                     </div>
@@ -84,12 +73,12 @@
                 <div class="card shadow">
                     <div class="card-header header-color">
                         <div class="">
-                            <h4>PUNTO DE VENTA</h4>
+                            <h4>Bienvenido usuario@gmail.com</h4>
                         </div>
                     </div>
                     <div class="card-footer text-muted">
                         <a class="info">Nombre: Nombre del Usuario</a>
-                        <a class="info">No. Tag: 6546846854</a>
+                        <a class="info">No. Tag: <a id="tag"></a></a>
                         <a class="info">Último movimiento: 11/04/2019</a>
                     </div>
                     <div class="btn-group" role="group" aria-label="Basic example">
@@ -118,34 +107,8 @@
                                     </tr>
                                 </thead>
                                 <tbody id="myTable">
-                                    <tr>
-                                        <td>Peaje</td>
-                                        <td>Tlalpan</td>
-                                        <td>11/04/2019</td>
-                                        <td>-$140.00</td>
-                                        <td>$220.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Peaje</td>
-                                        <td>Libramiento</td>
-                                        <td>21/03/2019</td>
-                                        <td>-$50.00</td>
-                                        <td>$300.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Recarga</td>
-                                        <td>-</td>
-                                        <td>19/01/2019</td>
-                                        <td>$70.00</td>
-                                        <td>$80.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Recarga</td>
-                                        <td>-</td>
-                                        <td>10/01/2019</td>
-                                        <td>$100.00</td>
-                                        <td>$200.00</td>
-                                    </tr>
+
+
                                 </tbody>
                             </table>
                         </div>
@@ -171,6 +134,40 @@
                 });
             });
         });
+
+        function primertag() {
+            var texto = $("#primertag").text();
+            $("#tag").html(texto);
+            $("#myTable").html('<tr><td>Peaje</td><td>Tlalpan</td><td>11/04/2019</td><td>-$110.00</td><td>$30.00</td></tr><tr><td>Peaje</td><td>Querétaro</td><td>10/04/2019</td><td>-$100.00</td><td>$140.00</td></tr><tr><td>Recarga</td><td>-</td><td>11/04/2019</td><td>$140.00</td><td>$240.00</td></tr>');
+        };
+
+        function segundotag() {
+            var texto = $("#segundotag").text();
+            $("#tag").html(texto);
+            $("#myTable").html('<tr><td>Peaje</td><td>Palmillas</td><td>11/04/2019</td><td>-$80.00</td><td>$220.00</td><tr><td>Recarga</td><td>-</td><td>11/04/2019</td><td>$300.00</td><td>$300.00</td></tr>');
+        };
+
+        function tercertag() {
+            var texto = $("#tercertag").text();
+            $("#tag").html(texto);
+            $("#myTable").html('<tr><td>Peaje</td><td>Querétaro</td><td>11/04/2019</td><td>-$100.00</td><td>$150.00</td><tr><td>Recarga</td><td>-</td><td>11/04/2019</td><td>$250.00</td><td>$250.00</td></tr>');
+        };
+
+        function cuartotag() {
+            var texto = $("#cuartotag").text();
+            $("#tag").html(texto);
+           $("#myTable").html('<tr><td>Peaje</td><td>Villagrand</td><td>11/04/2019</td><td>-$80.00</td><td>$20.00</td></tr><tr><td>Recarga</td><td>-</td><td>11/04/2019</td><td>$100.00</td><td>$100.00</td></tr>');
+        };
+
+        function primeracuenta() {
+            var texto = $("#primeracuenta").text();
+            $("#tag").html(texto);
+        };
+
+        function segundacuenta() {
+            var texto = $("#segundacuenta").text();
+            $("#tag").html(texto);
+        };
 
     </script>
 
