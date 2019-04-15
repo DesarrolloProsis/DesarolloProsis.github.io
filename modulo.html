@@ -32,7 +32,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Cerrar Sesión</a>
+                    <a class="nav-link" href="index.html">Cerrar Sesión</a>
                 </li>
 
             </ul>
@@ -45,10 +45,10 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="card shadow" style="margin-bottom: 30px;">
-                            <div class="card-header">
+                            <div class="card-header ">
                                 Tags Asociados
                             </div>
-                            <ul class="list-group list-group-flush">
+                            <ul class="list-group list-group-flush" style="overflow-y: scroll;">
                                 <li id="primertag" onclick="primertag()" class="list-group-item hoverlisttag">5019999961</li>
                                 <li id="segundotag" onclick="segundotag()" class="list-group-item hoverlisttag">5019999962</li>
                                 <li id="tercertag" onclick="tercertag()" class="list-group-item hoverlisttag">5019999963</li>
@@ -61,9 +61,9 @@
                             <div class="card-header">
                                 Cuentas Asociadas
                             </div>
-                            <ul class="list-group list-group-flush">
-                                <li id="primeracuenta" onclick="primeracuenta()" class="list-group-item hoverlisttag">6546846854</li>
-                                <li id="segundacuenta" onclick="segundacuenta()" class="list-group-item hoverlisttag">1365435484</li>
+                            <ul class="list-group list-group-flush" style="overflow-y: scroll;">
+                                <li id="primeracuenta" onclick="primeracuenta()" class="list-group-item hoverlisttag">6546846854<span style="float: right;" class="badge badge-primary">Colectiva</span></li>
+                                <li id="segundacuenta" onclick="segundacuenta()" class="list-group-item hoverlisttag">1365435484<span style="float: right;" class="badge badge-primary">Colectiva</span></li>
                             </ul>
                         </div>
                     </div>
@@ -96,7 +96,7 @@
                         </div>
                         <br>
                         <div class="table-responsive">
-                            <table class="table table-bordered">
+                            <table class="table table-bordered" style="overflow-y: scroll;">
                                 <thead>
                                     <tr>
                                         <th>Movimiento</th>
@@ -107,8 +107,6 @@
                                     </tr>
                                 </thead>
                                 <tbody id="myTable">
-
-
                                 </tbody>
                             </table>
                         </div>
@@ -162,11 +160,13 @@
         function primeracuenta() {
             var texto = $("#primeracuenta").text();
             $("#tag").html(texto);
+             $("#myTable").html('<tr><td>Peaje</td><td>Tlalpan</td><td>11/04/2019</td><td>-$110.00</td><td>$30.00</td></tr><tr><td>Peaje</td><td>Querétaro</td><td>10/04/2019</td><td>-$100.00</td><td>$140.00</td></tr><tr><td>Recarga</td><td>-</td><td>10/04/2019</td><td>$140.00</td><td>$240.00</td></tr><tr><td>Peaje</td><td>Querétaro</td><td>11/04/2019</td><td>-$100.00</td><td>$150.00</td><tr><td>Recarga</td><td>-</td><td>11/04/2019</td><td>$250.00</td><td>$250.00</td></tr>');
         };
 
         function segundacuenta() {
             var texto = $("#segundacuenta").text();
             $("#tag").html(texto);
+            $("#myTable").html('<tr><td>Peaje</td><td>Palmillas</td><td>11/04/2019</td><td>-$80.00</td><td>$220.00</td><tr><td>Recarga</td><td>-</td><td>11/04/2019</td><td>$300.00</td><td>$300.00</td></tr><tr><td>Peaje</td><td>Villagrand</td><td>11/04/2019</td><td>-$80.00</td><td>$20.00</td></tr><tr><td>Recarga</td><td>-</td><td>11/04/2019</td><td>$100.00</td><td>$100.00</td></tr>');
         };
 
     </script>
