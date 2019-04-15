@@ -18,8 +18,15 @@
     margin-left: 0 !important;
 
 }
-
 .botonresponsive:hover {
+  border-bottom-color: #BF360C;
+    border-bottom-width: 4px;
+    background-color: #f16021;
+
+}
+
+
+.active2 {
     border-bottom-color: #BF360C;
     border-bottom-width: 4px;
     background-color: #f16021;

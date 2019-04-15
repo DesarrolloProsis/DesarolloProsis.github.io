@@ -81,8 +81,8 @@
                         <a class="info">No. Tag: <a id="tag"></a></a>
                         <a class="info">Último movimiento: 11/04/2019</a>
                     </div>
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-secondary botonresponsive">MOVIMIENTOS</button>
+                    <div class="btn-group acciones" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-secondary botonresponsive active2">MOVIMIENTOS</button>
                         <button type="button" class="btn btn-secondary botonresponsive">ACLARACIONES</button>
                         <button type="button" class="btn btn-secondary botonresponsive">RECARGAR</button>
                     </div>
@@ -131,6 +131,10 @@
                     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
                 });
             });
+            $(".acciones button").click(function() {
+                $(this).siblings('button').removeClass('active2');
+                $(this).addClass("active2");
+            });
         });
 
         function primertag() {
@@ -154,13 +158,13 @@
         function cuartotag() {
             var texto = $("#cuartotag").text();
             $("#tag").html(texto);
-           $("#myTable").html('<tr><td>Peaje</td><td>Villagrand</td><td>11/04/2019</td><td>-$80.00</td><td>$20.00</td></tr><tr><td>Recarga</td><td>-</td><td>11/04/2019</td><td>$100.00</td><td>$100.00</td></tr>');
+            $("#myTable").html('<tr><td>Peaje</td><td>Villagrand</td><td>11/04/2019</td><td>-$80.00</td><td>$20.00</td></tr><tr><td>Recarga</td><td>-</td><td>11/04/2019</td><td>$100.00</td><td>$100.00</td></tr>');
         };
 
         function primeracuenta() {
             var texto = $("#primeracuenta").text();
             $("#tag").html(texto);
-             $("#myTable").html('<tr><td>Peaje</td><td>Tlalpan</td><td>11/04/2019</td><td>-$110.00</td><td>$30.00</td></tr><tr><td>Peaje</td><td>Querétaro</td><td>10/04/2019</td><td>-$100.00</td><td>$140.00</td></tr><tr><td>Recarga</td><td>-</td><td>10/04/2019</td><td>$140.00</td><td>$240.00</td></tr><tr><td>Peaje</td><td>Querétaro</td><td>11/04/2019</td><td>-$100.00</td><td>$150.00</td><tr><td>Recarga</td><td>-</td><td>11/04/2019</td><td>$250.00</td><td>$250.00</td></tr>');
+            $("#myTable").html('<tr><td>Peaje</td><td>Tlalpan</td><td>11/04/2019</td><td>-$110.00</td><td>$30.00</td></tr><tr><td>Peaje</td><td>Querétaro</td><td>10/04/2019</td><td>-$100.00</td><td>$140.00</td></tr><tr><td>Recarga</td><td>-</td><td>10/04/2019</td><td>$140.00</td><td>$240.00</td></tr><tr><td>Peaje</td><td>Querétaro</td><td>11/04/2019</td><td>-$100.00</td><td>$150.00</td><tr><td>Recarga</td><td>-</td><td>11/04/2019</td><td>$250.00</td><td>$250.00</td></tr>');
         };
 
         function segundacuenta() {
@@ -168,6 +172,8 @@
             $("#tag").html(texto);
             $("#myTable").html('<tr><td>Peaje</td><td>Palmillas</td><td>11/04/2019</td><td>-$80.00</td><td>$220.00</td><tr><td>Recarga</td><td>-</td><td>11/04/2019</td><td>$300.00</td><td>$300.00</td></tr><tr><td>Peaje</td><td>Villagrand</td><td>11/04/2019</td><td>-$80.00</td><td>$20.00</td></tr><tr><td>Recarga</td><td>-</td><td>11/04/2019</td><td>$100.00</td><td>$100.00</td></tr>');
         };
+
+        
 
     </script>
 
