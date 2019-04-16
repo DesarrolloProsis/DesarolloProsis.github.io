@@ -82,9 +82,9 @@
                         <a class="info">Último movimiento: 11/04/2019</a>
                     </div>
                     <div class="btn-group acciones" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-secondary botonresponsive active2">MOVIMIENTOS</button>
-                        <button type="button" class="btn btn-secondary botonresponsive">ACLARACIONES</button>
-                        <button type="button" class="btn btn-secondary botonresponsive">RECARGAR</button>
+                        <button type="button" class="btn btn-secondary botonresponsive active2" id="movimientos">MOVIMIENTOS</button>
+                        <button type="button" class="btn btn-secondary botonresponsive" id="aclaraciones">ACLARACIONES</button>
+                        <button type="button" class="btn btn-secondary botonresponsive" id="recargar">RECARGAR</button>
                     </div>
 
                     <div class="card-body">
@@ -107,6 +107,7 @@
                                     </tr>
                                 </thead>
                                 <tbody id="myTable">
+
                                 </tbody>
                             </table>
                         </div>
@@ -125,17 +126,33 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function() {
+
+            $(".acciones button").click(function() {
+                $(this).siblings('button').removeClass('active2');
+                $(this).addClass("active2");
+
+            });
+            $("#recargar").click(function() {
+
+                $(".card-body").html(' <div class="jumbotron"><h1 class="display-4">Aviso</h1><p class="lead">Para realizar una recarga es necesario acceder al siguiente enlace.</p><hr class="my-4"><a class="btn btn-primary btn-lg" href="https://www.corporacionbi.com/gt/bancoindustrial/inicio" role="button">Enlace a Recargas</a></div>');
+            });
+            $("#aclaraciones").click(function() {
+                $(".card-body").html('<form><div class = "form-row" ><div class = "form-group col-md-12" ><labelfor = "inputEmail4" > Email </label> <input type = "email"class = "form-control"id = "inputEmail4"placeholder = "Email"></div><div class = "form-group col-md-4"><labelfor = "inputState" > Tag </label> <select id = "inputState" class = "form-control" ><option selected > Seleccionar... </option> <option> ... </option> </select> </div> <div class = "form-group col-md-4" ><labelfor = "inputState" > Cuenta </label> <select id = "inputState"class = "form-control" ><option selected > Seleccionar... </option> <option > ... </option> </select> </div><div class = "form-group col-md-12" ><labelfor = "exampleFormControlTextarea1" > Example textarea </label> <textarea class = "form-control"id = "exampleFormControlTextarea1"rows = "3" > </textarea> </div> </div><button type = "submit"class = "btn btn-primary" > Aclarar </button> </form>');
+            });
+            $("#movimientos").click(function() {
+                location.reload();
+                $(".card-body").html('<div class="row"><div class="col-md-4"><input class="form-control" id="myInput" type="text" placeholder="Buscar..."></div><div class="col-md-4"></div></div><br><div class="table-responsive"><table class="table table-bordered" style="overflow-y: scroll;"><thead> <tr><th> Movimiento</th><th>Caseta/Tramo </th><th>Fecha</th> <th> Monto </th><th>Saldo</th> </tr></thead> <tbody id = "myTable"> </tbody></table > </div>');
+            });
             $("#myInput").on("keyup", function() {
                 var value = $(this).val().toLowerCase();
                 $("#myTable tr").filter(function() {
                     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
                 });
             });
-            $(".acciones button").click(function() {
-                $(this).siblings('button').removeClass('active2');
-                $(this).addClass("active2");
-            });
+
         });
+
+
 
         function primertag() {
             var texto = $("#primertag").text();
@@ -172,8 +189,6 @@
             $("#tag").html(texto);
             $("#myTable").html('<tr><td>Peaje</td><td>Palmillas</td><td>11/04/2019</td><td>-$80.00</td><td>$220.00</td><tr><td>Recarga</td><td>-</td><td>11/04/2019</td><td>$300.00</td><td>$300.00</td></tr><tr><td>Peaje</td><td>Villagrand</td><td>11/04/2019</td><td>-$80.00</td><td>$20.00</td></tr><tr><td>Recarga</td><td>-</td><td>11/04/2019</td><td>$100.00</td><td>$100.00</td></tr>');
         };
-
-        
 
     </script>
 
