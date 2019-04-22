@@ -41,10 +41,10 @@
 
     <main class="container-fluid py-5" style="margin-top: 3.5rem;">
         <div class="row">
-            <div class="col-xl-2">
+            <div class="col-xl-2" >
                 <div class="row">
                     <div class="col-xl-12">
-                        <div class="card shadow" style="margin-bottom: 30px;">
+                        <div class="card shadow" style="margin-bottom: 30px; height: 246px;">
                             <div class="card-header ">
                                 Tags Asociados
                             </div>
@@ -57,13 +57,14 @@
                         </div>
                     </div>
                     <div class="col-xl-12">
-                        <div class="card shadow" style="margin-bottom: 30px;">
+                        <div class="card shadow" style="margin-bottom: 30px; height: 246px;">
                             <div class="card-header">
                                 Cuentas Asociadas
                             </div>
                             <ul class="list-group list-group-flush" style="overflow-y: scroll;">
                                 <li id="primeracuenta" onclick="primeracuenta()" class="list-group-item hoverlisttag">6546846854<span style="float: right;" class="badge badge-primary">Colectiva</span></li>
                                 <li id="segundacuenta" onclick="segundacuenta()" class="list-group-item hoverlisttag">1365435484<span style="float: right;" class="badge badge-primary">Colectiva </span></li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -151,8 +152,6 @@
             });
 
         });
-
-
 
         function primertag() {
             var texto = $("#primertag").text();
