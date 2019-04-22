@@ -41,7 +41,7 @@
 
     <main class="container-fluid py-5" style="margin-top: 3.5rem;">
         <div class="row">
-            <div class="col-xl-2" >
+            <div class="col-xl-2">
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="card shadow" style="margin-bottom: 30px; height: 246px;">
@@ -64,7 +64,7 @@
                             <ul class="list-group list-group-flush" style="overflow-y: scroll;">
                                 <li id="primeracuenta" onclick="primeracuenta()" class="list-group-item hoverlisttag">6546846854<span style="float: right;" class="badge badge-primary">Colectiva</span></li>
                                 <li id="segundacuenta" onclick="segundacuenta()" class="list-group-item hoverlisttag">1365435484<span style="float: right;" class="badge badge-primary">Colectiva </span></li>
-                                
+
                             </ul>
                         </div>
                     </div>
@@ -138,7 +138,7 @@
                 $(".card-body").html(' <div class="jumbotron"><h1 class="display-4">Información</h1><p class="lead">Te redireccionaremos al portal de recarga del Banco Industrial </p><hr class="my-4"><a class="btn btn-primary btn-lg" href="https://www.corporacionbi.com/gt/bancoindustrial/inicio" role="button">Enlace a Recargas</a></div>');
             });
             $("#aclaraciones").click(function() {
-                $(".card-body").html('<form><div class = "form-row" ><div class = "form-group col-md-12" ><labelfor = "inputEmail4" > Email </label> <input type = "email"class = "form-control"id = "inputEmail4"placeholder = "Email"></div><div class = "form-group col-md-4"><labelfor = "inputState" > Tag </label> <select id = "inputState" class = "form-control" ><option selected > Seleccionar... </option> <option> ... </option> </select> </div> <div class = "form-group col-md-4" ><labelfor = "inputState" > Cuenta </label> <select id = "inputState"class = "form-control" ><option selected > Seleccionar... </option> <option > ... </option> </select> </div><div class = "form-group col-md-12" ><labelfor = "exampleFormControlTextarea1" > Example textarea </label> <textarea class = "form-control"id = "exampleFormControlTextarea1"rows = "3" > </textarea> </div> </div><button type = "submit"class = "btn btn-primary" > Aclarar </button> </form>');
+                $(".card-body").html('<form><div class = "form-row" ><div class = "form-group col-md-12" ><labelfor = "inputEmail4" > Email </label> <input type = "email"class = "form-control"id = "inputEmail4"placeholder = "Email"></div><div class = "form-group col-md-4"><labelfor = "inputState" > Tag </label> <select id = "inputState" class = "form-control" ><option selected > Seleccionar... </option> <option> 5019999961 </option><option> 5019999962 </option><option> 5019999963 </option><option> 5019999964 </option> </select> </div> <div class = "form-group col-md-4" ><labelfor = "inputState" > Cuenta </label> <select id = "inputState"class = "form-control" ><option selected > Seleccionar... </option> <option > 6546846854 </option><option > 1365435484 </option> </select> </div><div class = "form-group col-md-12" ><labelfor = "exampleFormControlTextarea1" > Mensaje </label> <textarea class = "form-control"id = "exampleFormControlTextarea1"rows = "3" > </textarea> </div> </div><button type = "submit"class = "btn btn-primary" > Aclarar </button> </form>');
             });
             $("#movimientos").click(function() {
                 location.reload();
@@ -154,12 +154,16 @@
         });
 
         function primertag() {
+
+
             var texto = $("#primertag").text();
             $("#tag").html(texto);
             $("#myTable").html('<tr><td>Peaje</td><td>Tlalpan</td><td>11/04/2019</td><td>-$110.00</td><td>$30.00</td></tr><tr><td>Peaje</td><td>Querétaro</td><td>10/04/2019</td><td>-$100.00</td><td>$140.00</td></tr><tr><td>Recarga</td><td>-</td><td>10/04/2019</td><td>$140.00</td><td>$240.00</td></tr>');
+
         };
 
         function segundotag() {
+
             var texto = $("#segundotag").text();
             $("#tag").html(texto);
             $("#myTable").html('<tr><td>Peaje</td><td>Palmillas</td><td>11/04/2019</td><td>-$80.00</td><td>$220.00</td><tr><td>Recarga</td><td>-</td><td>11/04/2019</td><td>$300.00</td><td>$300.00</td></tr>');
