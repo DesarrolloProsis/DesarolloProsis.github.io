@@ -127,7 +127,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function() {
-
+            $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
             $(".acciones button").click(function() {
                 $(this).siblings('button').removeClass('active2');
                 $(this).addClass("active2");
@@ -144,17 +149,11 @@
                 location.reload();
                 $(".card-body").html('<div class="row"><div class="col-md-4"><input class="form-control" id="myInput" type="text" placeholder="Buscar..."></div><div class="col-md-4"></div></div><br><div class="table-responsive"><table class="table table-bordered" style="overflow-y: scroll;"><thead> <tr><th> Movimiento</th><th>Caseta/Tramo </th><th>Fecha</th> <th> Monto </th><th>Saldo</th> </tr></thead> <tbody id = "myTable"> </tbody></table > </div>');
             });
-            $("#myInput").on("keyup", function() {
-                var value = $(this).val().toLowerCase();
-                $("#myTable tr").filter(function() {
-                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                });
-            });
+
 
         });
 
         function primertag() {
-
 
             var texto = $("#primertag").text();
             $("#tag").html(texto);
