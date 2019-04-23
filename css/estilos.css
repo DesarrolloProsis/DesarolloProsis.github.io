@@ -178,3 +178,24 @@
     background-color: #00a73c !important;
     border-color: #00a73c !important;
 }
+.back{
+    background-color: #f16021;
+    color: white !important;
+    border-radius: 5px;
+    vertical-align: middle;
+    font-size: 1.4em;
+    padding: 4.5px;
+   
+  
+}
+@media screen and (max-width: 600px) {
+    .back {
+    
+        font-size: 1em;
+        text-decoration: none;
+        transition: text-decoration 10s;
+        margin-left: 0 !important;
+
+    }
+
+}
